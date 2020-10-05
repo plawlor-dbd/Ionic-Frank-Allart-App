@@ -1,0 +1,98 @@
+
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class .popover-content {
+  background: #222;
+  top: 56px !important;
+  right: 20px !important;
+  left: auto !important;
+  transform-origin: right top !important;
+}
+.my-custom-class .popover-content a{
+  color: white;
+}
+
+.my-custom-class .popover-content a ion-icon{
+  padding-right: 5px;
+  padding-top: 10px;
+}
+
+hr#solid{
+  border-top: 3px solid #fff;
+}
+.sc-ion-popover-md-h{
+  --width:auto;
+}
+
+.smallInfo ion-col ion-label p{
+  color:#fff;
+  font-size:11px;
+  
+}
+.smallInfo{
+  width: 100%;
+}
+.smallInfo .smallInfoLeft p{
+  float:left;
+}
+.smallInfo .smallInfoRight p{
+  float:right;
+}
+
+ion-label p{
+  color:#fff !important;
+}
+
+ion-title{
+    text-align: center;
+    font-size:13px;
+}
+
+ion-card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 14px;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+ion-card{
+position: relative;
+  text-align: center;
+  border: white solid 1px;
+  width: calc(100% - 20px);
+  padding: 40px 0px;
+  min-height: 155px;
+}
+
+ion-content{
+  --background: none;
+  background-image: url('/assets/background2.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.list-ios {
+  background: transparent;
+}
+ion-list.list-md{
+  background: none;
+  --background:transparent;
+}
+
+ion-item{
+  --background:transparent;
+}
+a#rateAppbtn{
+  cursor: pointer;
+}
+a#shareAppbtn{
+  cursor: pointer;
+}

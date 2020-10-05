@@ -1,0 +1,21 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "Frank Allart",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "backgroundColor": "#ffffffff",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#00000000",
+      "showSpinner": false,
+      "splashFullScreen": true
+    }
+  },
+  "cordova": {}
+}

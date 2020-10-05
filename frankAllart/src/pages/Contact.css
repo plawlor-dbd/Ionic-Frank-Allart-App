@@ -1,0 +1,55 @@
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class .popover-content {
+    background: #222;
+    top: 56px !important;
+    right: 20px !important;
+    left: auto !important;
+    transform-origin: right top !important;
+  }
+  .my-custom-class .popover-content a{
+    color: white;
+  }
+  
+  hr#solid{
+    border-top: 3px solid #fff;
+  }
+  .sc-ion-popover-md-h{
+    --width:auto;
+  }
+  
+ion-icon.contact{
+    width:20%;
+}
+ion-card.c{
+padding:0 0;
+border: 0px;
+min-height: auto;
+}
+ion-card-content{
+    width:80%;
+    background-color: #fff;;
+    color: black;
+    flex-wrap: wrap;
+}
+
+ion-card-content p{
+    word-break: break-all;
+    white-space: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+button#addtocontactButton{
+    width: -webkit-fill-available;
+    font-size: 14px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 4px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    margin-bottom: 50px;
+    background-color: #fff;
+}
+
