@@ -53,14 +53,14 @@ const Miscellaneous: React.FC = () => {
         <IonRow>
           <IonCol>
           <a href="/home/Miscellaneous/ProductGalleryMC1">
-              <img  src="assets/miscellaneous/door holders and stops.png"/>
+              <img alt="MC1" src="assets/miscellaneous/door holders and stops.png"/>
             </a>
       <p>MC1</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/Miscellaneous/ProductGalleryMC2">
-              <img  src="assets/miscellaneous/hooks and brackets.png"/>
+              <img alt="MC2" src="assets/miscellaneous/hooks and brackets.png"/>
             </a>
       <p>MC2</p>
       </IonCol>
@@ -68,14 +68,14 @@ const Miscellaneous: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/Miscellaneous/ProductGalleryMC3">
-              <img  src="assets/miscellaneous/locks latches and bolts.png"/>
+              <img alt="MC3" src="assets/miscellaneous/locks latches and bolts.png"/>
             </a>
       <p>MC3</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/Miscellaneous/ProductGalleryMC4">
-              <img  src="assets/miscellaneous/door hinges.png"/>
+              <img alt="MC4" src="assets/miscellaneous/door hinges.png"/>
             </a>
       <p>MC4</p>
       </IonCol>
@@ -83,7 +83,7 @@ const Miscellaneous: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/Miscellaneous/ProductGalleryMC5">
-              <img  src="assets/miscellaneous/fasterners screws and components.png"/>
+              <img alt="MC5" src="assets/miscellaneous/fasterners screws and components.png"/>
             </a>
       <p>MC5</p>
       </IonCol>

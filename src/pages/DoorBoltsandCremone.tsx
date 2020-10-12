@@ -54,14 +54,14 @@ const DoorBoltsandCremone: React.FC = () => {
         <IonRow>
           <IonCol>
           <a href="/home/DoorBoltsandCremone/ProductGalleryDB1">
-              <img  src="assets/door-bolts-and-cremone/surface bolts.png"/>
+              <img alt="DB1" src="assets/door-bolts-and-cremone/surface bolts.png"/>
             </a>
       <p>DB1</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/DoorBoltsandCremone/ProductGalleryDB2">
-              <img  src="assets/door-bolts-and-cremone/flush and transom bolts.png"/>
+              <img alt="DB2" src="assets/door-bolts-and-cremone/flush and transom bolts.png"/>
             </a>
       <p>DB2</p>
       </IonCol>
@@ -69,14 +69,14 @@ const DoorBoltsandCremone: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/DoorBoltsandCremone/ProductGalleryDB3">
-              <img  src="assets/door-bolts-and-cremone/cremone bolt.png"/>
+              <img alt="DB3" src="assets/door-bolts-and-cremone/cremone bolt.png"/>
             </a>
       <p>DB3</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/DoorBoltsandCremone/ProductGalleryDB4">
-              <img  src="assets/door-bolts-and-cremone/straps strikes sockets and staples.png"/>
+              <img alt="DB4" src="assets/door-bolts-and-cremone/straps strikes sockets and staples.png"/>
             </a>
       <p>DB4</p>
       </IonCol>

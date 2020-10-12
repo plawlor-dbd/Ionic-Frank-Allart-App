@@ -54,14 +54,14 @@ const Indexes: React.FC = () => {
         <IonRow>
           <IonCol>
       <a href="/home/Indexes/AlphabeticalIndex/">
-              <img  src="assets/indexes/alphabetical index.png"/>
+              <img alt="Alpha Index" src="assets/indexes/alphabetical index.png"/>
             </a>
       <p>Alphabetic Index</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/Indexes/NumericalIndex/">
-              <img  src="assets/indexes/numeric index.png"/>
+              <img alt="Num Index" src="assets/indexes/numeric index.png"/>
             </a>
       <p>Numeric Index</p>
       </IonCol>

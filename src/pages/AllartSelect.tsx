@@ -54,14 +54,14 @@ const AllartSelect: React.FC = () => {
         <IonRow>
           <IonCol>
             <a href="/home/AllartSelect/ProductGalleryST1">
-              <img  src="assets/allart-select/door levers.png"/>
+              <img alt="ST1" src="assets/allart-select/door levers.png"/>
             </a>
             <p>ST1</p>
           </IonCol>
 
       <IonCol>
       <a href="/home/AllartSelect/ProductGalleryST2">
-              <img  src="assets/allart-select/door knobs.png"/>
+              <img alt="ST2" src="assets/allart-select/door knobs.png"/>
             </a>
       <p>ST2</p>
       </IonCol>
@@ -70,14 +70,14 @@ const AllartSelect: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/AllartSelect/ProductGalleryST3">
-              <img  src="assets/allart-select/rosettes.png"/>
+              <img alt="ST3" src="assets/allart-select/rosettes.png"/>
             </a>
       <p>ST3</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/AllartSelect/ProductGalleryST4">
-              <img  src="assets/allart-select/backplates.png"/>
+              <img alt="ST4" src="assets/allart-select/backplates.png"/>
             </a>
       <p>ST4</p>
       </IonCol>
@@ -86,14 +86,14 @@ const AllartSelect: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/AllartSelect/ProductGalleryST5">
-              <img  src="assets/allart-select/backplates functions.png"/>
+              <img alt="ST5"  src="assets/allart-select/backplates functions.png"/>
             </a>
       <p>ST5</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/AllartSelect/ProductGalleryST6">
-              <img  src="assets/allart-select/options and accessories.png"/>
+              <img alt="ST6" src="assets/allart-select/options and accessories.png"/>
             </a>
       <p>ST6</p>
       </IonCol>
@@ -102,7 +102,7 @@ const AllartSelect: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/AllartSelect/ProductGalleryST7">
-              <img  src="assets/allart-select/turns and releases.png"/>
+              <img alt="ST7" src="assets/allart-select/turns and releases.png"/>
             </a>
       <p>ST7</p>
       </IonCol>

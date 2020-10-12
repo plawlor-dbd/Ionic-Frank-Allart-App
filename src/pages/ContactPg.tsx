@@ -16,7 +16,7 @@ import {
   IonButton,
   IonPopover
 } from '@ionic/react';
-import {Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
+//import {Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
 import './Contact.css';
 
 
@@ -24,11 +24,11 @@ import './Contact.css';
 
 const ContactPg: React.FC = () => {
 
-  const [contact] = useState(Contact);
+  /*const [contact] = useState(Contact);
   const addContact = () =>{
     console.log('Add contact button clicked')
 
-  };
+  };*/
   const [showPopover, setShowPopover] = useState(false);
   return (
     

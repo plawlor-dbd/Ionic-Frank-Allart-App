@@ -53,14 +53,14 @@ const CabinetFurniture: React.FC = () => {
         <IonRow>
           <IonCol>
           <a href="/home/CabinetFurniture/ProductGalleryCF1">
-              <img  src="assets/cabinet-furniture/cabinet knobs.png"/>
+              <img alt="CF1" src="assets/cabinet-furniture/cabinet knobs.png"/>
             </a>
       <p>CF1</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/CabinetFurniture/ProductGalleryCF2">
-              <img  src="assets/cabinet-furniture/appliance pulls.png"/>
+              <img alt="CF2" src="assets/cabinet-furniture/appliance pulls.png"/>
             </a>
       <p>CF2</p>
       </IonCol>
@@ -68,7 +68,7 @@ const CabinetFurniture: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/CabinetFurniture/ProductGalleryCF3">
-                <img  src="assets/cabinet-furniture/ring pulls catches flush rings.png"/>
+                <img alt="CF3" src="assets/cabinet-furniture/ring pulls catches flush rings.png"/>
             </a>
       <p>CF3</p>
       </IonCol>

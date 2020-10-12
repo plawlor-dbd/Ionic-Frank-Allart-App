@@ -21,7 +21,7 @@ const MenuListItem: React.FC<MenuListItemProps> = ({ menu }) => {
         </h2>
       </IonLabel>
       <IonThumbnail slot="end">
-        <img src ={menu.src}/>
+        <img alt="menu" src ={menu.src}/>
       </IonThumbnail>
     </IonItem>
   );

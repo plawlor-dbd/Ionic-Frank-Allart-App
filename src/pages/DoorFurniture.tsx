@@ -53,14 +53,14 @@ const DoorFurniture: React.FC = () => {
         <IonRow>
           <IonCol>
           <a href="/home/DoorFurniture/ProductGalleryDF1">
-              <img  src="assets/door-furniture/door lever sets.png"/>
+              <img alt="DF1" src="assets/door-furniture/door lever sets.png"/>
             </a>
       <p>DF1</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/DoorFurniture/ProductGalleryDF2">
-            <img  src="assets/door-furniture/door knob sets.png"/>
+            <img alt="DF2" src="assets/door-furniture/door knob sets.png"/>
             </a>
       <p>DF2</p>
       </IonCol>
@@ -68,14 +68,14 @@ const DoorFurniture: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/DoorFurniture/ProductGalleryDF3">
-              <img  src="assets/door-furniture/pull handles and plates.png"/>
+              <img alt="DF3" src="assets/door-furniture/pull handles and plates.png"/>
             </a>
       <p> DF3</p>
       </IonCol>
 
       <IonCol>
       <a href="/home/DoorFurniture/ProductGalleryDF4">
-              <img  src="assets/door-furniture/sliding door furniture.png"/>
+              <img alt="DF4" src="assets/door-furniture/sliding door furniture.png"/>
             </a>
       <p>DF4</p>
       </IonCol>
@@ -83,14 +83,14 @@ const DoorFurniture: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/DoorFurniture/ProductGalleryDF5">
-                <img  src="assets/door-furniture/entrance and exterior door furniture.png"/>
+                <img alt="DF5" src="assets/door-furniture/entrance and exterior door furniture.png"/>
             </a>
       <p>DF5 </p>
       </IonCol>
 
       <IonCol>
       <a href="/home/DoorFurniture/ProductGalleryDF6">
-                <img  src="assets/door-furniture/turns releases and escutcheons.png"/>
+                <img alt="DF6" src="assets/door-furniture/turns releases and escutcheons.png"/>
             </a>
       <p>DF6</p>
       </IonCol>

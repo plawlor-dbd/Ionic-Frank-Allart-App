@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
 import {
   IonItem,
-  IonLabel,
-  IonNote,
   IonThumbnail,
-  IonList,
   IonImg,
   IonContent,
-  IonPopover,
-  IonIcon,
   IonModal,
   IonButton,
   IonButtons,
   IonHeader,
   IonToolbar,
-  IonTitle
   } from '@ionic/react';
 import { Images } from '../data/ProductImages';
 import './ProductImagesItem.css';
