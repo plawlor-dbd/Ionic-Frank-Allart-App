@@ -19,7 +19,7 @@ import './Home.css';
 import MenuListItem from '../components/MenuListItem';
 import 'tippy.js/dist/tippy.css';
 //import { SocialSharing } from '@ionic-native/social-sharing/';
-import { AppRate } from '@ionic-native/app-rate/';
+//import { AppRate } from '@ionic-native/app-rate/';
 
 
 
