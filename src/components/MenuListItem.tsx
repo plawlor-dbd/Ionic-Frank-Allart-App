@@ -2,7 +2,6 @@ import React from 'react';
 import {
   IonItem,
   IonLabel,
-  IonNote,
   IonThumbnail
   } from '@ionic/react';
 import { Menu } from '../data/menuItems';

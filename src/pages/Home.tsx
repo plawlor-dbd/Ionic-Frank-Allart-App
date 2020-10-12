@@ -18,7 +18,7 @@ import {
 import './Home.css';
 import MenuListItem from '../components/MenuListItem';
 import 'tippy.js/dist/tippy.css';
-import { SocialSharing } from '@ionic-native/social-sharing/';
+//import { SocialSharing } from '@ionic-native/social-sharing/';
 import { AppRate } from '@ionic-native/app-rate/';
 
 
@@ -41,12 +41,12 @@ const Home: React.FC = () => {
     }).catch(() => {
       
     });
-  };*/
+  };
   const [rateAppObj] = useState(AppRate);
   const rateApp = () =>{
     console.log(rateAppObj);
     rateAppObj.navigateToAppStore();
-  }
+  }*/
 
   useIonViewWillEnter(() => {
     const mnu = getMenuItems();
