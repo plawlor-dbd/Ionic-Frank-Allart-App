@@ -9,6 +9,25 @@ height: 100%;
   --background: #000;
 }
 
+.react-transform-component{
+  height: 80vh !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.react-transform-element{
+  height: 100% !important;
+}
+.react-transform-component .react-transform-element img{
+  max-height: 100%;
+}
+
+#prodTitle{
+  position:fixed;
+  width: 100%;
+  text-align: center;
+}
+
 
 ion-thumbnail#prodImage {
    width: 100%;
@@ -24,3 +43,4 @@ ion-item#prodImgItem{
     margin:5px;
     min-height: 50px;
 }
+

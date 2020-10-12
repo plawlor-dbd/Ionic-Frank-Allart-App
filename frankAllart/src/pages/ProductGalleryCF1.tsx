@@ -66,7 +66,7 @@ const ProductGalleryCF1: React.FC = () => {
           </IonPopover>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent>
         <IonRefresher slot="fixed" onIonRefresh={refresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>

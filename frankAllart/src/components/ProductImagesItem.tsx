@@ -41,13 +41,13 @@ const ProductImagesItem: React.FC<ProductImagesItemProps> = ({ productImages }) 
               </IonButtons>
             </IonToolbar>
           </IonHeader>
-          <IonContent fullscreen>
+          <IonContent>
           <TransformWrapper>
         <TransformComponent>
           <img src={productImages.src} alt="productImage" />
         </TransformComponent>
       </TransformWrapper>
-            <p >
+            <p  id="prodTitle">
               {productImages.title}
             </p>
           </IonContent>
