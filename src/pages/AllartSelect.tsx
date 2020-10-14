@@ -86,7 +86,7 @@ const AllartSelect: React.FC = () => {
       <IonRow>
           <IonCol>
           <a href="/home/AllartSelect/ProductGalleryST5">
-              <img alt="ST5"  src="assets/allart-select/backplates functions.png"/>
+              <img alt="ST5" src="assets/allart-select/backplates functions.png"/>
             </a>
       <p>ST5</p>
       </IonCol>

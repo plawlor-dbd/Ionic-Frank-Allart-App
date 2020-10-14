@@ -53,13 +53,13 @@ const WindowFurniture: React.FC = () => {
         <IonRow>
         <IonCol>
         <a href="/home/WindowFurniture/ProductGalleryWF1">
-              <img  alt="WF1" src="assets/window-furniture/espagnolette handles.png"/>
+              <img alt="WF1" src="assets/window-furniture/espagnolette handles.png"/>
             </a>
           <p>WF1</p>
         </IonCol>
         <IonCol>
         <a href="/home/WindowFurniture/ProductGalleryWF2">
-              <img  alt="WF2" src="assets/window-furniture/fasteners stays and accessories.png"/>
+              <img alt="WF2" src="assets/window-furniture/fasteners stays and accessories.png"/>
             </a>
           <p>WF2</p>
         </IonCol>
@@ -67,7 +67,7 @@ const WindowFurniture: React.FC = () => {
       <IonRow>
         <IonCol>
         <a href="/home/WindowFurniture/ProductGalleryWF3">
-                <img alt="WF3"  src="assets/window-furniture/fasteners lifts and accessories.png"/>
+                <img alt="WF3" src="assets/window-furniture/fasteners lifts and accessories.png"/>
             </a>
       <p>WF3</p>
       </IonCol>

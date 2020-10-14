@@ -28,8 +28,8 @@ const Home: React.FC = () => {
   const [menuItems, setMenuItems] = useState<Menu[]>([]);
   const [showPopover, setShowPopover] = useState(false);
 
-  //const [shareAppObj] = useState(SocialSharing);
-  /*const shareApp = () => {
+  /*const [shareAppObj] = useState(SocialSharing);
+  const shareApp = () => {
     console.log('Email!');
     shareAppObj.canShareViaEmail().then(() => {
       shareAppObj.shareViaEmail('Body', 'Subject', ['recipient@example.org']).then(() => {

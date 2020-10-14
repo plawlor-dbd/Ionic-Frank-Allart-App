@@ -1,5 +1,5 @@
 {
-  "appId": "com.frankAllart.frankAllartApp",
+  "appId": "io.ionic.frankAllartApp",
   "appName": "Frank Allart",
   "bundledWebRuntime": false,
   "npmClient": "npm",
