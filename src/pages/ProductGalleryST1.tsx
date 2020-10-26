@@ -22,7 +22,6 @@ import ProductImagesItem from '../components/ProductImagesItem';
 import { Images, getProductImages } from '../data/ProductImages';
 
 const ProductGalleryST1: React.FC = () => {
-
   const [ProductImages, setProductImages] = useState<Images[]>([]);
   const [showPopover, setShowPopover] = useState(false);
 
@@ -46,7 +45,7 @@ const ProductGalleryST1: React.FC = () => {
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
-          <IonTitle>ST1</IonTitle>
+  <IonTitle>ST1</IonTitle>
           <IonButtons slot="end">
           <IonButton class="actionButton" onClick={() => setShowPopover(true)}>
             <IonIcon slot="icon-only" src="assets/icon/ellipsis-vertical-outline.svg"/>
@@ -78,7 +77,7 @@ const ProductGalleryST1: React.FC = () => {
         <IonLabel><p>15 Photos</p></IonLabel>
         </IonList>
         <IonList id="productGalleryls">
-          {ProductImages.filter((pi) => pi.pageName === 'ST1').map( pi => <ProductImagesItem key={pi.id} productImages={pi} />)}
+        {ProductImages.filter((pi) => pi.pageName === 'ST1').map( pi => <ProductImagesItem key={pi.id} productImages={pi} />)}
         </IonList>
       </IonContent>
     </IonPage>

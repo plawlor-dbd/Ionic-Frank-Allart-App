@@ -11,6 +11,7 @@ export interface Images {
       src: 'assets/productImages/ST1/Allart-Select-Door-Levers_000001.jpg',
       title: 'Allart-Select-Door-Levers_000001.jpg',
       id: 0
+      
     },
     {
         pageName:'ST1',
