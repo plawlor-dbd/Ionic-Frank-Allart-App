@@ -15,15 +15,21 @@ import {
   IonLabel,
   IonButton,
   IonIcon,
-  IonPopover
+  IonPopover,
+  IonItem,
+  IonModal,
+  IonSlide,
+  IonSlides,
 } from '@ionic/react';
 import './AllartSelectStyle.css';
 import ProductImagesItem from '../components/ProductImagesItem';
 import { Images, getProductImages } from '../data/ProductImages';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 const ProductGalleryST1: React.FC = () => {
   const [ProductImages, setProductImages] = useState<Images[]>([]);
   const [showPopover, setShowPopover] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useIonViewWillEnter(() => {
     const pimg = getProductImages();
@@ -35,6 +41,12 @@ const ProductGalleryST1: React.FC = () => {
       e.detail.complete();
     }, 3000);
   };
+
+  const slideOpts = {
+    initialSlide: 2,
+    speed: 400
+  };
+  
 
   return (
     <IonPage id="product-gallery">
@@ -77,11 +89,45 @@ const ProductGalleryST1: React.FC = () => {
         <IonLabel><p>15 Photos</p></IonLabel>
         </IonList>
         <IonList id="productGalleryls">
-        {ProductImages.filter((pi) => pi.pageName === 'ST1').map( pi => <ProductImagesItem key={pi.id} productImages={pi} />)}
+          {ProductImages.filter((pi) => pi.pageName === 'ST1').map( pi =>(
+            <IonItem key={pi.id} id="prodImgItem">          
+              <IonThumbnail id="prodImage" slot="start">
+                <IonImg onClick={() => setShowModal(true)} src={pi.src} />
+              </IonThumbnail>
+            </IonItem>
+          ))}
         </IonList>
+        <IonModal  isOpen={showModal}  cssClass='productModal'>
+              <IonHeader translucent>
+            <IonToolbar>
+              <IonButtons slot="end">
+                <IonButton onClick={() => setShowModal(false)}>Close</IonButton>
+              </IonButtons>
+            </IonToolbar>
+          </IonHeader>
+          <IonContent>
+                  <IonSlides pager={false} options={(slideOpts)}>
+                {ProductImages.filter((pi) => pi.pageName === 'ST1').map( pi =>(
+                  <React.Fragment>
+                  <IonSlide key={pi.id}>
+                    <TransformWrapper>
+                      <TransformComponent>
+                        <img alt={pi.pageName} src={pi.src}></img>
+                      </TransformComponent>
+                    </TransformWrapper>
+                  </IonSlide>
+                  </React.Fragment>
+                ))}
+                </IonSlides>
+                {/* <p style={{marginTop:"1px"}} id="prodTitle">{pi.title}</p> */}
+          </IonContent>
+          {/*<img src={productImages.src} alt="productImage" /> */}
+          </IonModal>
       </IonContent>
     </IonPage>
   );
 };
+
+
 
 export default ProductGalleryST1;

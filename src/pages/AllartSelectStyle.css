@@ -11,6 +11,7 @@ ion-thumbnail#productGalleryTitleImg{
 ion-list#productGalleryls{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 /* Works - pass "my-custom-class" in cssClass to increase specificity */
 .my-custom-class .popover-content {
