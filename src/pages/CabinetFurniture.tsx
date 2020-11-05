@@ -11,7 +11,8 @@ import {
   IonCol,
   IonButton,
   IonIcon,
-  IonPopover
+  IonPopover,
+  IonItem
 } from '@ionic/react';
 import './CabinetFurniture.css';
 
@@ -52,11 +53,11 @@ const CabinetFurniture: React.FC = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-          <a href="/home/CabinetFurniture/ProductGalleryCF1">
+            <IonItem routerLink="/home/CabinetFurniture/ProductGallery/CF1">
               <img alt="CF1" src="assets/cabinet-furniture/cabinet knobs.png"/>
-            </a>
-      <p>CF1</p>
-      </IonCol>
+            </IonItem>
+            <p>CF1</p>
+          </IonCol>
 
       <IonCol>
       <a href="/home/CabinetFurniture/ProductGalleryCF2">
