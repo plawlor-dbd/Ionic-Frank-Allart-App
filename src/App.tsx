@@ -30,6 +30,7 @@ import Miscellaneous from './pages/Miscellaneous';
 import FinishesandPatinas from './pages/FinishesandPatinas';
 import Indexes from './pages/Indexes';
 import Contact from './pages/ContactPg';
+import ProductGallery from './pages/ProductGallery';
 import ProductGalleryST1 from './pages/ProductGalleryST1';
 import ProductGalleryST2 from './pages/ProductGalleryST2';
 import ProductGalleryST3 from './pages/ProductGalleryST3';
@@ -88,6 +89,9 @@ const App: React.FC = () => (
           <Route path="/home/DoorFurniture/ProductGalleryDF5" component={ProductGalleryDF5} exact={true} />
           <Route path="/home/DoorFurniture/ProductGalleryDF6" component={ProductGalleryDF6} exact={true} />
           <Route path="/home/CabinetFurniture" component={CabinetFurniture} exact={true} />
+          
+          <Route path="/home/CabinetFurniture/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
+          
           <Route path="/home/CabinetFurniture/ProductGalleryCF1" component={ProductGalleryCF1} exact={true} />
           <Route path="/home/CabinetFurniture/ProductGalleryCF2" component={ProductGalleryCF2} exact={true} />
           <Route path="/home/CabinetFurniture/ProductGalleryCF3" component={ProductGalleryCF3} exact={true} />
