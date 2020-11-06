@@ -11,9 +11,11 @@ import {
   IonCol,
   IonButton,
   IonIcon,
-  IonPopover
+  IonPopover,
+  IonItem,
+  IonLabel
 } from '@ionic/react';
-import './DoorBoltsandCremone.css';
+import '../styles/DoorBoltsandCremone.css';
 
 const DoorBoltsandCremone: React.FC = () => {
 
@@ -25,7 +27,7 @@ const DoorBoltsandCremone: React.FC = () => {
       <IonHeader>
         <IonToolbar>
         <IonButtons  slot="start">
-          <IonButton href="..">
+          <IonButton routerLink="..">
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
@@ -39,9 +41,9 @@ const DoorBoltsandCremone: React.FC = () => {
             isOpen={showPopover}
             cssClass='my-custom-class'
             onDidDismiss={e => setShowPopover(false)}>
-            <a href="/Notifications"><IonIcon slot="icon-only" src="assets/icon/notifications-outline.svg"/>Notifications</a>
+             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
             <hr id="solid"></hr>
-            <a href="/Search"><IonIcon slot="icon-only" src="assets/icon/search-outline.svg"/>Search</a>
+            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
             {/*<hr id="solid"></hr>
             <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
             <hr id="solid"></hr>
@@ -53,31 +55,31 @@ const DoorBoltsandCremone: React.FC = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-          <a href="/home/DoorBoltsandCremone/ProductGalleryDB1">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorBoltsandCremone/ProductGallery/DB1">
               <img alt="DB1" src="assets/door-bolts-and-cremone/surface bolts.png"/>
-            </a>
+            </IonItem>
       <p>DB1</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/DoorBoltsandCremone/ProductGalleryDB2">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorBoltsandCremone/ProductGallery/DB2">
               <img alt="DB2" src="assets/door-bolts-and-cremone/flush and transom bolts.png"/>
-            </a>
+            </IonItem>
       <p>DB2</p>
       </IonCol>
       </IonRow>
       <IonRow>
           <IonCol>
-          <a href="/home/DoorBoltsandCremone/ProductGalleryDB3">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorBoltsandCremone/ProductGallery/DB3">
               <img alt="DB3" src="assets/door-bolts-and-cremone/cremone bolt.png"/>
-            </a>
+            </IonItem>
       <p>DB3</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/DoorBoltsandCremone/ProductGalleryDB4">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorBoltsandCremone/ProductGallery/DB4">
               <img alt="DB4" src="assets/door-bolts-and-cremone/straps strikes sockets and staples.png"/>
-            </a>
+            </IonItem>
       <p>DB4</p>
       </IonCol>
       </IonRow>

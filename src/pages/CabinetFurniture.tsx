@@ -12,9 +12,10 @@ import {
   IonButton,
   IonIcon,
   IonPopover,
-  IonItem
+  IonItem,
+  IonLabel
 } from '@ionic/react';
-import './CabinetFurniture.css';
+import '../styles/CabinetFurniture.css';
 
 const CabinetFurniture: React.FC = () => {
 
@@ -25,7 +26,7 @@ const CabinetFurniture: React.FC = () => {
       <IonHeader>
         <IonToolbar>
         <IonButtons  slot="start">
-          <IonButton href="..">
+          <IonButton routerLink="..">
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
@@ -39,9 +40,9 @@ const CabinetFurniture: React.FC = () => {
             isOpen={showPopover}
             cssClass='my-custom-class'
             onDidDismiss={e => setShowPopover(false)}>
-            <a href="/Notifications"><IonIcon slot="icon-only" src="assets/icon/notifications-outline.svg"/>Notifications</a>
+             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
             <hr id="solid"></hr>
-            <a href="/Search"><IonIcon slot="icon-only" src="assets/icon/search-outline.svg"/>Search</a>
+            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
             {/*<hr id="solid"></hr>
             <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
             <hr id="solid"></hr>
@@ -53,24 +54,24 @@ const CabinetFurniture: React.FC = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-            <IonItem routerLink="/home/CabinetFurniture/ProductGallery/CF1">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/CabinetFurniture/ProductGallery/CF1">
               <img alt="CF1" src="assets/cabinet-furniture/cabinet knobs.png"/>
             </IonItem>
             <p>CF1</p>
           </IonCol>
 
       <IonCol>
-      <a href="/home/CabinetFurniture/ProductGalleryCF2">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/CabinetFurniture/ProductGallery/CF2">
               <img alt="CF2" src="assets/cabinet-furniture/appliance pulls.png"/>
-            </a>
+            </IonItem>
       <p>CF2</p>
       </IonCol>
       </IonRow>
       <IonRow>
           <IonCol>
-          <a href="/home/CabinetFurniture/ProductGalleryCF3">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/CabinetFurniture/ProductGallery/CF3">
                 <img alt="CF3" src="assets/cabinet-furniture/ring pulls catches flush rings.png"/>
-            </a>
+            </IonItem>
       <p>CF3</p>
       </IonCol>
 

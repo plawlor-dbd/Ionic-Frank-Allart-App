@@ -11,9 +11,11 @@ import {
   IonCol,
   IonButton,
   IonIcon,
-  IonPopover
+  IonPopover,
+  IonItem,
+  IonLabel
 } from '@ionic/react';
-import './AllartSelect.css';
+import '../styles/AllartSelect.css';
 
 const AllartSelect: React.FC = () => {
 
@@ -25,7 +27,7 @@ const AllartSelect: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonButtons  slot="start">
-          <IonButton href="..">
+          <IonButton routerLink="..">
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
@@ -39,9 +41,9 @@ const AllartSelect: React.FC = () => {
             isOpen={showPopover}
             cssClass='my-custom-class'
             onDidDismiss={e => setShowPopover(false)}>
-             <a href="/Notifications"><IonIcon slot="icon-only" src="assets/icon/notifications-outline.svg"/>Notifications</a>
+             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
             <hr id="solid"></hr>
-            <a href="/Search"><IonIcon slot="icon-only" src="assets/icon/search-outline.svg"/>Search</a>
+            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
             {/*<hr id="solid"></hr>
             <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
             <hr id="solid"></hr>
@@ -52,58 +54,58 @@ const AllartSelect: React.FC = () => {
       <IonContent fullscreen>
       <IonGrid>
         <IonRow>
-          <IonCol>
-            <a href="/home/AllartSelect/ProductGalleryST1">
+          <IonCol >
+            <IonItem className="catImages" mode='md' detail={false} routerLink="/home/AllartSelect/ProductGallery/ST1">
               <img alt="ST1" src="assets/allart-select/door levers.png"/>
-            </a>
+            </IonItem>
             <p>ST1</p>
           </IonCol>
 
       <IonCol>
-      <a href="/home/AllartSelect/ProductGalleryST2">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/AllartSelect/ProductGallery/ST2">
               <img alt="ST2" src="assets/allart-select/door knobs.png"/>
-            </a>
+            </IonItem>
       <p>ST2</p>
       </IonCol>
       </IonRow>
 
       <IonRow>
           <IonCol>
-          <a href="/home/AllartSelect/ProductGalleryST3">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/AllartSelect/ProductGallery/ST3">
               <img alt="ST3" src="assets/allart-select/rosettes.png"/>
-            </a>
+            </IonItem>
       <p>ST3</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/AllartSelect/ProductGalleryST4">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/AllartSelect/ProductGallery/ST4">
               <img alt="ST4" src="assets/allart-select/backplates.png"/>
-            </a>
+            </IonItem>
       <p>ST4</p>
       </IonCol>
       </IonRow>
 
       <IonRow>
           <IonCol>
-          <a href="/home/AllartSelect/ProductGalleryST5">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/AllartSelect/ProductGallery/ST5">
               <img alt="ST5" src="assets/allart-select/backplates functions.png"/>
-            </a>
+            </IonItem>
       <p>ST5</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/AllartSelect/ProductGalleryST6">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/AllartSelect/ProductGallery/ST6">
               <img alt="ST6" src="assets/allart-select/options and accessories.png"/>
-            </a>
+            </IonItem>
       <p>ST6</p>
       </IonCol>
       </IonRow>
 
       <IonRow>
           <IonCol>
-          <a href="/home/AllartSelect/ProductGalleryST7">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/AllartSelect/ProductGallery/ST7">
               <img alt="ST7" src="assets/allart-select/turns and releases.png"/>
-            </a>
+            </IonItem>
       <p>ST7</p>
       </IonCol>
 

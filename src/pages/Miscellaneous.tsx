@@ -11,9 +11,11 @@ import {
   IonCol,
   IonButton,
   IonIcon,
-  IonPopover
+  IonPopover,
+  IonItem,
+  IonLabel
 } from '@ionic/react';
-import './Miscellaneous.css';
+import '../styles/Miscellaneous.css';
 
 const Miscellaneous: React.FC = () => {
 
@@ -24,7 +26,7 @@ const Miscellaneous: React.FC = () => {
       <IonHeader>
         <IonToolbar>
         <IonButtons  slot="start">
-          <IonButton href="..">
+          <IonButton routerLink="..">
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
@@ -38,9 +40,9 @@ const Miscellaneous: React.FC = () => {
             isOpen={showPopover}
             cssClass='my-custom-class'
             onDidDismiss={e => setShowPopover(false)}>
-             <a href="/Notifications"><IonIcon slot="icon-only" src="assets/icon/notifications-outline.svg"/>Notifications</a>
+             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
             <hr id="solid"></hr>
-            <a href="/Search"><IonIcon slot="icon-only" src="assets/icon/search-outline.svg"/>Search</a>
+            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
             {/*<hr id="solid"></hr>
             <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
             <hr id="solid"></hr>
@@ -52,39 +54,39 @@ const Miscellaneous: React.FC = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-          <a href="/home/Miscellaneous/ProductGalleryMC1">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/Miscellaneous/ProductGallery/MC1">
               <img alt="MC1" src="assets/miscellaneous/door holders and stops.png"/>
-            </a>
+            </IonItem>
       <p>MC1</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/Miscellaneous/ProductGalleryMC2">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/Miscellaneous/ProductGallery/MC2">
               <img alt="MC2" src="assets/miscellaneous/hooks and brackets.png"/>
-            </a>
+            </IonItem>
       <p>MC2</p>
       </IonCol>
       </IonRow>
       <IonRow>
           <IonCol>
-          <a href="/home/Miscellaneous/ProductGalleryMC3">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/Miscellaneous/ProductGallery/MC3">
               <img alt="MC3" src="assets/miscellaneous/locks latches and bolts.png"/>
-            </a>
+            </IonItem>
       <p>MC3</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/Miscellaneous/ProductGalleryMC4">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/Miscellaneous/ProductGallery/MC4">
               <img alt="MC4" src="assets/miscellaneous/door hinges.png"/>
-            </a>
+            </IonItem>
       <p>MC4</p>
       </IonCol>
       </IonRow>
       <IonRow>
           <IonCol>
-          <a href="/home/Miscellaneous/ProductGalleryMC5">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/Miscellaneous/ProductGallery/MC5">
               <img alt="MC5" src="assets/miscellaneous/fasterners screws and components.png"/>
-            </a>
+            </IonItem>
       <p>MC5</p>
       </IonCol>
 

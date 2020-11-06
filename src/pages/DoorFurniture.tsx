@@ -11,9 +11,11 @@ import {
   IonCol,
   IonButton,
   IonIcon,
-  IonPopover
+  IonPopover,
+  IonItem,
+  IonLabel
 } from '@ionic/react';
-import './DoorFurniture.css';
+import '../styles/DoorFurniture.css';
 
 const DoorFurniture: React.FC = () => {
 
@@ -24,7 +26,7 @@ const DoorFurniture: React.FC = () => {
       <IonHeader>
         <IonToolbar>
         <IonButtons  slot="start">
-          <IonButton href="..">
+          <IonButton routerLink="..">
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
@@ -38,10 +40,10 @@ const DoorFurniture: React.FC = () => {
             isOpen={showPopover}
             cssClass='my-custom-class'
             onDidDismiss={e => setShowPopover(false)}>
-            <a href="/Notifications"><IonIcon slot="icon-only" src="assets/icon/notifications-outline.svg"/>Notifications</a>
+             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
             <hr id="solid"></hr>
-            <a href="/Search"><IonIcon slot="icon-only" src="assets/icon/search-outline.svg"/>Search</a>
-           {/*<hr id="solid"></hr>
+            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
+            {/*<hr id="solid"></hr>
             <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
             <hr id="solid"></hr>
   <a><IonIcon slot="icon-only" src="assets/icon/share-social-outline.svg"/>Share Now</a>*/}
@@ -52,46 +54,46 @@ const DoorFurniture: React.FC = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-          <a href="/home/DoorFurniture/ProductGalleryDF1">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorFurniture/ProductGallery/DF1">
               <img alt="DF1" src="assets/door-furniture/door lever sets.png"/>
-            </a>
+            </IonItem>
       <p>DF1</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/DoorFurniture/ProductGalleryDF2">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorFurniture/ProductGallery/DF2">
             <img alt="DF2" src="assets/door-furniture/door knob sets.png"/>
-            </a>
+            </IonItem>
       <p>DF2</p>
       </IonCol>
       </IonRow>
       <IonRow>
           <IonCol>
-          <a href="/home/DoorFurniture/ProductGalleryDF3">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorFurniture/ProductGallery/DF3">
               <img alt="DF3" src="assets/door-furniture/pull handles and plates.png"/>
-            </a>
+            </IonItem>
       <p> DF3</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/DoorFurniture/ProductGalleryDF4">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorFurniture/ProductGallery/DF4">
               <img alt="DF4" src="assets/door-furniture/sliding door furniture.png"/>
-            </a>
+            </IonItem>
       <p>DF4</p>
       </IonCol>
       </IonRow>
       <IonRow>
           <IonCol>
-          <a href="/home/DoorFurniture/ProductGalleryDF5">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorFurniture/ProductGallery/DF5">
                 <img alt="DF5" src="assets/door-furniture/entrance and exterior door furniture.png"/>
-            </a>
+            </IonItem>
       <p>DF5 </p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/DoorFurniture/ProductGalleryDF6">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/DoorFurniture/ProductGallery/DF6">
                 <img alt="DF6" src="assets/door-furniture/turns releases and escutcheons.png"/>
-            </a>
+            </IonItem>
       <p>DF6</p>
       </IonCol>
       </IonRow>

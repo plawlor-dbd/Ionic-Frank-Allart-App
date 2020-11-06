@@ -71,52 +71,69 @@ const App: React.FC = () => (
   <IonReactRouter>
         <IonRouterOutlet id="main">
           <Route path="/home" component={Home} exact={true} />
-          <Route path="/home/AllartSelect" component={AllartSelect} exact={true} />
           <Route path="/Notifications" component={Notifications} exact={true} />
           <Route path="/Search" component={Search} exact={true} />
-          <Route path="/home/AllartSelect/ProductGalleryST1" component={ProductGalleryST1} exact={true} />
+
+          <Route path="/home/AllartSelect" component={AllartSelect} exact={true} />
+          <Route path="/home/AllartSelect/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
+
+          {/*}<Route path="/home/AllartSelect/ProductGalleryST1" component={ProductGalleryST1} exact={true} />
           <Route path="/home/AllartSelect/ProductGalleryST2" component={ProductGalleryST2} exact={true} />
           <Route path="/home/AllartSelect/ProductGalleryST3" component={ProductGalleryST3} exact={true} />
           <Route path="/home/AllartSelect/ProductGalleryST4" component={ProductGalleryST4} exact={true} />
           <Route path="/home/AllartSelect/ProductGalleryST5" component={ProductGalleryST5} exact={true} />
           <Route path="/home/AllartSelect/ProductGalleryST6" component={ProductGalleryST6} exact={true} />
-          <Route path="/home/AllartSelect/ProductGalleryST7" component={ProductGalleryST7} exact={true} />
+<Route path="/home/AllartSelect/ProductGalleryST7" component={ProductGalleryST7} exact={true} />*/}
+
           <Route path="/home/DoorFurniture" component={DoorFurniture} exact={true} />
-          <Route path="/home/DoorFurniture/ProductGalleryDF1" component={ProductGalleryDF1} exact={true} />
+          <Route path="/home/DoorFurniture/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
+
+          {/*<Route path="/home/DoorFurniture/ProductGalleryDF1" component={ProductGalleryDF1} exact={true} />
           <Route path="/home/DoorFurniture/ProductGalleryDF2" component={ProductGalleryDF2} exact={true} />
           <Route path="/home/DoorFurniture/ProductGalleryDF3" component={ProductGalleryDF3} exact={true} />
           <Route path="/home/DoorFurniture/ProductGalleryDF4" component={ProductGalleryDF4} exact={true} />
           <Route path="/home/DoorFurniture/ProductGalleryDF5" component={ProductGalleryDF5} exact={true} />
-          <Route path="/home/DoorFurniture/ProductGalleryDF6" component={ProductGalleryDF6} exact={true} />
-          <Route path="/home/CabinetFurniture" component={CabinetFurniture} exact={true} />
+<Route path="/home/DoorFurniture/ProductGalleryDF6" component={ProductGalleryDF6} exact={true} />*/}
           
+          <Route path="/home/CabinetFurniture" component={CabinetFurniture} exact={true} />
           <Route path="/home/CabinetFurniture/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
           
-          <Route path="/home/CabinetFurniture/ProductGalleryCF1" component={ProductGalleryCF1} exact={true} />
+          {/** <Route path="/home/CabinetFurniture/ProductGalleryCF1" component={ProductGalleryCF1} exact={true} />
           <Route path="/home/CabinetFurniture/ProductGalleryCF2" component={ProductGalleryCF2} exact={true} />
-          <Route path="/home/CabinetFurniture/ProductGalleryCF3" component={ProductGalleryCF3} exact={true} />
+          <Route path="/home/CabinetFurniture/ProductGalleryCF3" component={ProductGalleryCF3} exact={true} />*/}
+
           <Route path="/home/DoorBoltsandCremone" component={DoorBoltsandCremone} exact={true} />
-          <Route path="/home/DoorBoltsandCremone/ProductGalleryDB1" component={ProductGalleryDB1} exact={true} />
+          <Route path="/home/DoorBoltsandCremone/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
+
+          {/** <Route path="/home/DoorBoltsandCremone/ProductGalleryDB1" component={ProductGalleryDB1} exact={true} />
           <Route path="/home/DoorBoltsandCremone/ProductGalleryDB2" component={ProductGalleryDB2} exact={true} />
           <Route path="/home/DoorBoltsandCremone/ProductGalleryDB3" component={ProductGalleryDB3} exact={true} />
-          <Route path="/home/DoorBoltsandCremone/ProductGalleryDB4" component={ProductGalleryDB4} exact={true} />
+          <Route path="/home/DoorBoltsandCremone/ProductGalleryDB4" component={ProductGalleryDB4} exact={true} />*/}
+
           <Route path="/home/WindowFurniture" component={WindowFurniture} exact={true} />
-          <Route path="/home/WindowFurniture/ProductGalleryWF1" component={ProductGalleryWF1} exact={true} />
+          <Route path="/home/WindowFurniture/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
+
+          {/** <Route path="/home/WindowFurniture/ProductGalleryWF1" component={ProductGalleryWF1} exact={true} />
           <Route path="/home/WindowFurniture/ProductGalleryWF2" component={ProductGalleryWF2} exact={true} />
           <Route path="/home/WindowFurniture/ProductGalleryWF3" component={ProductGalleryWF3} exact={true} />
-          <Route path="/home/WindowFurniture/ProductGalleryWF4" component={ProductGalleryWF4} exact={true} />
+          <Route path="/home/WindowFurniture/ProductGalleryWF4" component={ProductGalleryWF4} exact={true} />*/}
+
           <Route path="/home/Miscellaneous" component={Miscellaneous} exact={true} />
-          <Route path="/home/Miscellaneous/ProductGalleryMC1" component={ProductGalleryMC1} exact={true} />
+          <Route path="/home/Miscellaneous/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
+
+          {/*<Route path="/home/Miscellaneous/ProductGalleryMC1" component={ProductGalleryMC1} exact={true} />
           <Route path="/home/Miscellaneous/ProductGalleryMC2" component={ProductGalleryMC2} exact={true} />
           <Route path="/home/Miscellaneous/ProductGalleryMC3" component={ProductGalleryMC3} exact={true} />
           <Route path="/home/Miscellaneous/ProductGalleryMC4" component={ProductGalleryMC4} exact={true} />
-          <Route path="/home/Miscellaneous/ProductGalleryMC5" component={ProductGalleryMC5} exact={true} />
-          <Route path="/home/FinishesandPatinas" component={FinishesandPatinas} exact={true} />
-          <Route path="/home/Indexes" component={Indexes} exact={true} />
+        <Route path="/home/Miscellaneous/ProductGalleryMC5" component={ProductGalleryMC5} exact={true} />**/}
 
-          <Route path="/home/Contact" component={Contact} exact={true} />
+          <Route path="/home/FinishesandPatinas" component={FinishesandPatinas} exact={true} />
+
+          <Route path="/home/Indexes" component={Indexes} exact={true} />
           <Route path="/home/Indexes/AlphabeticalIndex" component={AlphabticalIndex} exact={true} />
           <Route path="/home/Indexes/NumericalIndex" component={NumericalIndex} exact={true} />
+
+          <Route path="/home/Contact" component={Contact} exact={true} />
           <Route exact path="/" render={() => <Redirect to="/home" />} />
         </IonRouterOutlet>
   </IonReactRouter>

@@ -11,9 +11,11 @@ import {
   IonCol,
   IonButton,
   IonIcon,
-  IonPopover
+  IonPopover,
+  IonItem,
+  IonLabel
 } from '@ionic/react';
-import './Indexes.css';
+import '../styles/Indexes.css';
 
 const Indexes: React.FC = () => {
 
@@ -25,7 +27,7 @@ const Indexes: React.FC = () => {
       <IonHeader>
         <IonToolbar>
         <IonButtons  slot="start">
-          <IonButton href="..">
+          <IonButton routerLink="..">
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
@@ -39,9 +41,9 @@ const Indexes: React.FC = () => {
             isOpen={showPopover}
             cssClass='my-custom-class'
             onDidDismiss={e => setShowPopover(false)}>
-             <a href="/Notifications"><IonIcon slot="icon-only" src="assets/icon/notifications-outline.svg"/>Notifications</a>
+             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
             <hr id="solid"></hr>
-            <a href="/Search"><IonIcon slot="icon-only" src="assets/icon/search-outline.svg"/>Search</a>
+            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
             {/*<hr id="solid"></hr>
             <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
             <hr id="solid"></hr>
@@ -53,16 +55,16 @@ const Indexes: React.FC = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-      <a href="/home/Indexes/AlphabeticalIndex/">
+          <IonItem mode='md' className="catImages" detail={false} routerLink="/home/Indexes/AlphabeticalIndex/">
               <img alt="Alpha Index" src="assets/indexes/alphabetical index.png"/>
-            </a>
+            </IonItem>
       <p>Alphabetic Index</p>
       </IonCol>
 
       <IonCol>
-      <a href="/home/Indexes/NumericalIndex/">
+      <IonItem mode='md' className="catImages" detail={false} routerLink="/home/Indexes/NumericalIndex/">
               <img alt="Num Index" src="assets/indexes/numeric index.png"/>
-            </a>
+            </IonItem>
       <p>Numeric Index</p>
       </IonCol>
       </IonRow>

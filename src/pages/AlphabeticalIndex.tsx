@@ -13,9 +13,10 @@ import { IonPage,
   IonRefresherContent, 
   IonLabel, 
   IonCol,
-  IonRow} from "@ionic/react";
+  IonRow,
+  IonItem} from "@ionic/react";
 import React, { useState } from "react";
-import './AlphabeticalIndex.css';
+import '../styles/AlphabeticalIndex.css';
 import ProductImagesItem from '../components/ProductImagesItem';
   import { Images, getProductImages } from '../data/ProductImages';
 
@@ -39,7 +40,7 @@ const AlphabticalIndex: React.FC = () => {
       <IonHeader>
         <IonToolbar>
         <IonButtons  slot="start">
-          <IonButton href="/home/Indexes">
+          <IonButton routerLink="/home/Indexes">
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
@@ -53,9 +54,9 @@ const AlphabticalIndex: React.FC = () => {
             isOpen={showPopover}
             cssClass='my-custom-class'
             onDidDismiss={e => setShowPopover(false)}>
-             <a href="/Notifications"><IonIcon slot="icon-only" src="assets/icon/notifications-outline.svg"/>Notifications</a>
+             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
             <hr id="solid"></hr>
-            <a href="/Search"><IonIcon slot="icon-only" src="assets/icon/search-outline.svg"/>Search</a>
+            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
             {/*<hr id="solid"></hr>
             <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
             <hr id="solid"></hr>

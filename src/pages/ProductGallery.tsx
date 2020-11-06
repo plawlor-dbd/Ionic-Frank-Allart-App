@@ -15,9 +15,10 @@ import {
   IonLabel,
   IonButton,
   IonIcon,
-  IonPopover
+  IonPopover,
+  IonItem
 } from '@ionic/react';
-import './AllartSelectStyle.css';
+import '../styles/AllartSelectStyle.css';
 import ProductImagesItem from '../components/ProductImagesItem';
 import { Images, getProductImages } from '../data/ProductImages';
 import { RouteComponentProps } from "react-router-dom";
@@ -29,6 +30,8 @@ interface ProductGalleryProps extends RouteComponentProps<{
 const ProductGallery: React.FC<ProductGalleryProps> = ({ match }) => {
   const [ProductImages, setProductImages] = useState<Images[]>([]);
   const [showPopover, setShowPopover] = useState(false);
+
+   var numImages = ProductImages.filter((pi) => pi.pageName === match.params.imagesListID).length;
 
   useIonViewWillEnter(() => {
     const pimg = getProductImages();
@@ -46,7 +49,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ match }) => {
       <IonHeader>
         <IonToolbar>
         <IonButtons  slot="start">
-          <IonButton href="/home/CabinetFurniture">
+          <IonButton routerLink="..">
             <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
             </IonButton>
         </IonButtons>
@@ -60,13 +63,13 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ match }) => {
             isOpen={showPopover}
             cssClass='my-custom-class'
             onDidDismiss={e => setShowPopover(false)}>
-            <a href="/Notifications"><IonIcon slot="icon-only" src="assets/icon/notifications-outline.svg"/>Notifications</a>
+             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
             <hr id="solid"></hr>
-            <a href="/Search"><IonIcon slot="icon-only" src="assets/icon/search-outline.svg"/>Search</a>
-            {/* <hr id="solid"></hr>
+            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
+            {/*<hr id="solid"></hr>
             <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
             <hr id="solid"></hr>
-  					<a><IonIcon slot="icon-only" src="assets/icon/share-social-outline.svg"/>Share Now</a> */}
+  <a><IonIcon slot="icon-only" src="assets/icon/share-social-outline.svg"/>Share Now</a>*/}
           </IonPopover>
         </IonToolbar>
       </IonHeader>
@@ -76,10 +79,10 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ match }) => {
         </IonRefresher>
         <IonList id="productGalleryTitles">
         <IonThumbnail id="productGalleryTitleImg">
-          <IonImg src="assets/menu-images/CF.png"/>
+          <IonImg alt={match.params.imagesListID} src={`assets/menu-images/${match.params.imagesListID.substring(0,2)}.png`}/>
         </IonThumbnail>
         <IonLabel><p>{match.params.imagesListID}</p></IonLabel>
-        <IonLabel><p>10 Photos</p></IonLabel>
+        <IonLabel><p>{numImages} Photos</p></IonLabel>
         </IonList>
         <IonList id="productGalleryls">
         {ProductImages.filter((pi) => pi.pageName === match.params.imagesListID).map( pi => <ProductImagesItem key={pi.id} productImages={pi} />)}
