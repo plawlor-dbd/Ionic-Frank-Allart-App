@@ -25,35 +25,47 @@ const ProductImagesItem: React.FC<ProductImagesItemProps> = ({ productImages }) 
   const [hasNextProductImage, setHasNextProductImage] = useState(false);
 
   const prevNextStyle = {
-      fontSize: "10px",
+    fontSize: '10px'
+  }
+
+  const handleOnWillPresent = () => {
+    const prevImg = document.getElementById("modal-" + (productImages.id-1)); 
+    const nextImg = document.getElementById("modal-" + (productImages.id+1));
+
+    console.log(productImages.id+1); 
+    console.log(prevImg);
+    console.log(nextImg);
+
+    if (!prevImg) {
+      setHasPrevProductImage(false);
+    } else {
+      setHasPrevProductImage(true);
+    }
+
+    if (!nextImg) {
+      setHasNextProductImage(false);
+    } else {
+      setHasNextProductImage(true);
+    }
   }
 
   return (
-
-    
-        <IonItem id="prodImgItem">          
-          <IonThumbnail id="prodImage" slot="start">
-            <IonImg class="productImgBtn" id={"modal-" + productImages.id.toString()} onClick={() => setShowModal(true)} src={productImages.src} />
-            <IonModal  isOpen={showModal} cssClass='productModal' onWillPresent={function(){
-                const prevImg = document.getElementById("modal-" + (productImages.id-1)); 
-                const nextImg = document.getElementById("modal-" + (productImages.id+1));
-                console.log(productImages.id+1); 
-                console.log(prevImg);
-                console.log(nextImg);
-                if(!prevImg){setHasPrevProductImage(false);}else{setHasPrevProductImage(true);}
-                if(!nextImg){  setHasNextProductImage(false);}else{setHasNextProductImage(true);}}}>
-              <IonHeader translucent>
+    <IonItem id="prodImgItem">          
+      <IonThumbnail id="prodImage" slot="start">
+        <IonImg class="productImgBtn" id={"modal-" + productImages.id.toString()} onClick={() => setShowModal(true)} src={productImages.src} />
+        <IonModal isOpen={showModal} cssClass='productModal' onWillPresent={handleOnWillPresent}>
+          <IonHeader translucent>
             <IonToolbar>
               <IonButtons slot="end">
                 <IonButton  color="dark" id={"close-btn-" + productImages.id.toString()} onClick={() => setShowModal(false)}>Close</IonButton>
               </IonButtons>
             </IonToolbar>
           </IonHeader>
-          <IonContent>
+        <IonContent>
           <TransformWrapper>
-          <TransformComponent>
-          <img src={productImages.src} alt="productImage" />
-          </TransformComponent>
+            <TransformComponent>
+              <img src={productImages.src} alt="productImage" />
+            </TransformComponent>
           </TransformWrapper>
           <div style={{display: "inline-block", margin: "0 auto" }}>
             {hasPrevProductImage &&
@@ -68,16 +80,11 @@ const ProductImagesItem: React.FC<ProductImagesItemProps> = ({ productImages }) 
               {productImages.title}
             </p>
           </IonContent>
-          </IonModal>
-        </IonThumbnail>
-      </IonItem>
-
-      
+        </IonModal>
+      </IonThumbnail>
+    </IonItem> 
   );
 };
-
-
-
 
 function previousSlide(id){
   console.log(id);
@@ -92,9 +99,6 @@ function nextSlide(id){
   id++;
   document.getElementById("modal-" + (id).toString()).click();
 }
-
-
-
 
 export default ProductImagesItem;
 
