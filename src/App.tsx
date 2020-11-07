@@ -36,6 +36,8 @@ import NumericalIndex from './pages/NumericaIlndex';
 import Notifications from './pages/Notifications';
 import Search from './pages/Search';
 
+import './styles/base/utility.css'
+
 
 const App: React.FC = () => (
   <IonApp>

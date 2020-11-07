@@ -1,6 +1,6 @@
-import React from 'react'
-import { IonSlides, IonSlide, IonContent } from '@ionic/react'
-import ProductImagesItem from '../components/ProductImagesItem'
+import React, { useRef } from 'react'
+import { IonSlides, IonSlide, IonImg } from '@ionic/react'
+import '../styles/ProductSlider.css'
 
 interface Slide {
 	pageName: string
@@ -11,22 +11,49 @@ interface Slide {
 
 interface ProductSliderProps {
 	slides: Slide[]
+	openOnSlide: number
+	handleCloseSlider: () => void
 }
 
-const ProductSlider: React.FC<ProductSliderProps> = ({ slides }) => {
+const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, handleCloseSlider }) => {
+	const slidesRef = useRef(null)
+
+  const handleChangeSlide = async (direction) => {
+		const swiper = await slidesRef.current.getSwiper()
+		
+		if (direction === 'next') {
+			swiper.slideNext()
+		} else {
+			// Assume previous slide
+			swiper.slidePrev()
+		}
+	}
+	
 	return (
-		<IonContent>
-			<IonSlides>
+		<div className="ProductSlider">
+			<button
+				className="ProductSlider__close"
+				onClick={handleCloseSlider}
+			>
+				Close
+			</button>
+			<IonSlides
+				ref={slidesRef}
+				options={{initialSlide: openOnSlide}}
+			>
 				{slides.map(slide => (
 					<IonSlide key={slide.id}>
-						<ProductImagesItem
+						<IonImg
 							key={slide.id}
-							productImages={slide}
-						/>
+							class="ProductSlider__img"
+							src={slide.src}
+							/>
 					</IonSlide>
 				))}
 			</IonSlides>
-		</IonContent>
+			<button onClick={() => handleChangeSlide('prev')}>Prev</button>
+			<button onClick={() => handleChangeSlide('next')}>Next</button>
+		</div>
 	)
 }
 
