@@ -1,95 +1,84 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   IonContent,
-  IonHeader,
   IonList,
   IonPage,
   IonRefresher,
   IonRefresherContent,
-  IonTitle,
-  IonToolbar,
   useIonViewWillEnter,
-  IonButtons,
   IonThumbnail,
   IonImg,
-  IonLabel,
-  IonButton,
-  IonIcon,
-  IonPopover,
-  IonItem
-} from '@ionic/react';
-import '../styles/AllartSelectStyle.css';
-import ProductImagesItem from '../components/ProductImagesItem';
-import { Images, getProductImages } from '../data/ProductImages';
-import { RouteComponentProps } from "react-router-dom";
+  IonLabel
+} from '@ionic/react'
+import '../styles/AllartSelectStyle.css'
+import { Images, getProductImages } from '../data/ProductImages'
+import { RouteComponentProps } from 'react-router-dom'
+import Header from '../components/Header'
+import ProductSlider from '../components/ProductSlider'
+import ProductThumbnail from '../components/ProductThumbnail'
 
 interface ProductGalleryProps extends RouteComponentProps<{
-  imagesListID: string;
+  imagesListID: string
 }> {}
 
 const ProductGallery: React.FC<ProductGalleryProps> = ({ match }) => {
-  const [ProductImages, setProductImages] = useState<Images[]>([]);
-  const [showPopover, setShowPopover] = useState(false);
-
-   var numImages = ProductImages.filter((pi) => pi.pageName === match.params.imagesListID).length;
+  const [ProductImages, setProductImages] = useState<Images[]>([])
+  const [sliderIsOpen, setSliderIsOpen] = useState(false)
+  const [openOnSlide, setOpenOnSlide] = useState(0)
+  const filteredImages = ProductImages.filter((pi) => pi.pageName === match.params.imagesListID)
+  const imagesListID = match.params.imagesListID
 
   useIonViewWillEnter(() => {
-    const pimg = getProductImages();
-    setProductImages(pimg);
-  });
+    const pimg = getProductImages()
+    setProductImages(pimg)
+  })
 
-  const refresh = (e: CustomEvent) => {
-    setTimeout(() => {
-      e.detail.complete();
-    }, 3000);
-  };
+  const refresh = (e: CustomEvent) =>
+    setTimeout(() => e.detail.complete(), 3000)
+
+  const handleOpenSlider = (slideToOpen) => {
+    setOpenOnSlide(slideToOpen)
+    setSliderIsOpen(true)
+  }
+
+  const handleCloseSlider = () =>
+    setSliderIsOpen(false)
 
   return (
     <IonPage id="product-gallery">
-      <IonHeader>
-        <IonToolbar>
-        <IonButtons  slot="start">
-          <IonButton routerLink="..">
-            <IonIcon slot="icon-only" src="assets/icon/chevron-back-outline.svg"/>
-            </IonButton>
-        </IonButtons>
-          <IonTitle>{match.params.imagesListID}</IonTitle>
-          <IonButtons slot="end">
-          <IonButton class="actionButton" onClick={() => setShowPopover(true)}>
-            <IonIcon slot="icon-only" src="assets/icon/ellipsis-vertical-outline.svg"/>
-          </IonButton>
-        </IonButtons>
-        <IonPopover
-            isOpen={showPopover}
-            cssClass='my-custom-class'
-            onDidDismiss={e => setShowPopover(false)}>
-             <IonItem mode='md' detail={false}  className="popOverItem" routerLink="/Notifications"><IonIcon slot="start" src="assets/icon/notifications-outline.svg"/><IonLabel>Notifications</IonLabel></IonItem>
-            <hr id="solid"></hr>
-            <IonItem  mode='md' detail={false} className="popOverItem" routerLink="/Search"><IonIcon slot="start" src="assets/icon/search-outline.svg"/><IonLabel>Search</IonLabel></IonItem>
-            {/*<hr id="solid"></hr>
-            <a><IonIcon slot="icon-only" src="assets/icon/thumbs-up-outline.svg"/>Rate Now</a>
-            <hr id="solid"></hr>
-  <a><IonIcon slot="icon-only" src="assets/icon/share-social-outline.svg"/>Share Now</a>*/}
-          </IonPopover>
-        </IonToolbar>
-      </IonHeader>
+      <Header heading={imagesListID} />
       <IonContent>
         <IonRefresher slot="fixed" onIonRefresh={refresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>
         <IonList id="productGalleryTitles">
-        <IonThumbnail id="productGalleryTitleImg">
-          <IonImg alt={match.params.imagesListID} src={`assets/menu-images/${match.params.imagesListID.substring(0,2)}.png`}/>
-        </IonThumbnail>
-        <IonLabel><p>{match.params.imagesListID}</p></IonLabel>
-        <IonLabel><p>{numImages} Photos</p></IonLabel>
+          <IonThumbnail id="productGalleryTitleImg">
+            <IonImg alt={imagesListID} src={`assets/menu-images/${imagesListID.substring(0,2)}.png`}/>
+          </IonThumbnail>
+          <IonLabel><p>{imagesListID}</p></IonLabel>
+          <IonLabel><p>{filteredImages.length} Photos</p></IonLabel>
         </IonList>
         <IonList id="productGalleryls">
-        {ProductImages.filter((pi) => pi.pageName === match.params.imagesListID).map( pi => <ProductImagesItem key={pi.id} productImages={pi} />)}
+          {filteredImages.map((image, index) => (
+            <ProductThumbnail
+              key={image.id}
+              slideIndex={index}
+              id={image.id}
+              src={image.src}
+              handleOpenSlider={handleOpenSlider}
+            />
+          ))}
         </IonList>
+        {sliderIsOpen && (
+          <ProductSlider
+            slides={filteredImages}
+            openOnSlide={openOnSlide}
+            handleCloseSlider={handleCloseSlider}
+          />
+        )}
       </IonContent>
     </IonPage>
-  );
-};
+  )
+}
 
-export default ProductGallery;
+export default ProductGallery
