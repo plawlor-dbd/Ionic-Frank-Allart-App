@@ -33,8 +33,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ match }) => {
     setProductImages(pimg)
   })
 
-  const refresh = (e: CustomEvent) =>
-    setTimeout(() => e.detail.complete(), 3000)
+
 
   const handleOpenSlider = (slideToOpen) => {
     setOpenOnSlide(slideToOpen)
@@ -48,9 +47,6 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ match }) => {
     <IonPage id="product-gallery">
       <Header heading={imagesListID} />
       <IonContent>
-        <IonRefresher slot="fixed" onIonRefresh={refresh}>
-          <IonRefresherContent></IonRefresherContent>
-        </IonRefresher>
         <IonList id="productGalleryTitles">
           <IonThumbnail id="productGalleryTitleImg">
             <IonImg alt={imagesListID} src={`assets/menu-images/${imagesListID.substring(0,2)}.png`}/>

@@ -33,11 +33,6 @@ const NumericalIndex: React.FC = () => {
     setProductImages(pimg);
   });
 
-  const refresh = (e: CustomEvent) => {
-    setTimeout(() => {
-      e.detail.complete();
-    }, 3000);
-  };
 
   const handleOpenSlider = (slideToOpen) => {
     setOpenOnSlide(slideToOpen)
@@ -77,9 +72,6 @@ const NumericalIndex: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonRefresher slot="fixed" onIonRefresh={refresh}>
-          <IonRefresherContent></IonRefresherContent>
-        </IonRefresher>
         <IonRow class="smallInfo">
           <IonCol class="smallInfoLeft">
         <IonLabel><p>Numerical Index</p></IonLabel>
