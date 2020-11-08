@@ -19,10 +19,16 @@ import React, { useState } from "react";
 import '../styles/AlphabeticalIndex.css';
 import ProductImagesItem from '../components/ProductImagesItem';
   import { Images, getProductImages } from '../data/ProductImages';
+import ProductSlider from "../components/ProductSlider";
+import ProductThumbnail from "../components/ProductThumbnail";
 
 const AlphabticalIndex: React.FC = () => {
   const [ProductImages, setProductImages] = useState<Images[]>([]);
   const [showPopover, setShowPopover] = useState(false);
+  const [sliderIsOpen, setSliderIsOpen] = useState(false)
+  const [openOnSlide, setOpenOnSlide] = useState(0)
+  const filteredImages = ProductImages.filter((pi) => pi.pageName === "AI" )
+  const imagesListID = "AI"
 
   useIonViewWillEnter(() => {
     const pimg = getProductImages();
@@ -34,6 +40,15 @@ const AlphabticalIndex: React.FC = () => {
       e.detail.complete();
     }, 3000);
   };
+
+  const handleOpenSlider = (slideToOpen) => {
+    setOpenOnSlide(slideToOpen)
+    setSliderIsOpen(true)
+  }
+
+  const handleCloseSlider = () =>
+    setSliderIsOpen(false)
+
     return (
       
         <IonPage id="AlphabeticalIndexes">
@@ -65,7 +80,6 @@ const AlphabticalIndex: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-      <IonList id="productGalleryls">
         <IonRefresher slot="fixed" onIonRefresh={refresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>
@@ -78,9 +92,23 @@ const AlphabticalIndex: React.FC = () => {
         </IonCol >
         </IonRow>
         <IonList id="productGalleryls">
-        {ProductImages.filter((pi) => pi.pageName === 'AI').map( pi => <ProductImagesItem key={pi.id} productImages={pi} />)}
+        {filteredImages.map((image, index) => (
+            <ProductThumbnail
+              key={image.id}
+              slideIndex={index}
+              id={image.id}
+              src={image.src}
+              handleOpenSlider={handleOpenSlider}
+            />
+          ))}
         </IonList>
-      </IonList>
+        {sliderIsOpen && (
+          <ProductSlider
+            slides={filteredImages}
+            openOnSlide={openOnSlide}
+            handleCloseSlider={handleCloseSlider}
+          />
+        )}
       </IonContent>
     </IonPage>
     );

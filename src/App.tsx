@@ -66,6 +66,7 @@ const App: React.FC = () => (
       <Route path="/home/Miscellaneous/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
 
       <Route path="/home/FinishesandPatinas" component={FinishesandPatinas} exact={true} />
+      
 
       <Route path="/home/Indexes" component={Indexes} exact={true} />
       <Route path="/home/Indexes/AlphabeticalIndex" component={AlphabticalIndex} exact={true} />
