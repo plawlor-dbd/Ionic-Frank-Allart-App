@@ -3,8 +3,6 @@ import {
   IonContent,
   IonList,
   IonPage,
-  IonRefresher,
-  IonRefresherContent,
   useIonViewWillEnter,
   IonThumbnail,
   IonImg,
