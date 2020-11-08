@@ -11,6 +11,7 @@
 
 .slideImg {
 	object-position: center !important;
+	object-fit: fill;
 	height: 100%;
 }
 
