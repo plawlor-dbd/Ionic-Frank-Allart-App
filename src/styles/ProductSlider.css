@@ -1,3 +1,6 @@
+ion-header{
+	position:static !important;
+}
 /* Block */
 .ProductSlider {
 	position: fixed;
