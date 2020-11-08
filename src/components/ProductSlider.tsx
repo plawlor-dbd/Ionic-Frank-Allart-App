@@ -19,7 +19,7 @@ interface ProductSliderProps {
 const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, handleCloseSlider }) => {
 	const slidesRef = useRef(null)
 
-  const handleChangeSlide = async (direction) => {
+  {/*const handleChangeSlide = async (direction) => {
 		const swiper = await slidesRef.current.getSwiper()
 		
 		if (direction === 'next') {
@@ -28,7 +28,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, hand
 			// Assume previous slide
 			swiper.slidePrev()
 		}
-	}
+	}*/}
 	
 	return (
 		<div className="ProductSlider">
