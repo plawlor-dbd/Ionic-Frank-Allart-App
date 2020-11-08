@@ -53,7 +53,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, hand
 										src={slide.src} />
 								</TransformComponent>
 							</TransformWrapper>
-							<p>{slide.title}</p>
+							<p style={{marginTop:'4px'}}>{slide.title}</p>
 						</IonSlide>
 				))}
 				
