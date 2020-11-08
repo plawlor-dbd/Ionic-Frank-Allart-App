@@ -46,9 +46,9 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, hand
 					<IonSlide key={slide.id}>
 						 <TransformWrapper>
           					<TransformComponent>
-								<IonImg className="slideImg"
+								<img className="slideImg"
 									key={slide.id}
-									class="ProductSlider__img"
+									
 									src={slide.src}
 								/>
 							</TransformComponent>
