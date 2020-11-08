@@ -33,28 +33,28 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, hand
 	return (
 		<div className="ProductSlider">
 			<button
-				className="ProductSlider__close"
-				onClick={handleCloseSlider}
-			>
-				Close
-			</button>
+						className="ProductSlider__close"
+						onClick={handleCloseSlider}
+					>
+						Close
+					</button>
 			<IonSlides
 				ref={slidesRef}
 				options={{initialSlide: openOnSlide}}
 			>
 				{slides.map(slide => (
-					<IonSlide key={slide.id}>
-						 <TransformWrapper>
-          					<TransformComponent>
-								<img alt={slide.title} className="slideImg"
-									key={slide.id}
-									
-									src={slide.src}
-								/>
-							</TransformComponent>
-						</TransformWrapper>
-						<p>{slide.title}</p>
-					</IonSlide>
+					
+						<IonSlide key={slide.id}>
+							<TransformWrapper>
+								<TransformComponent>
+									<img alt={slide.title} className="slideImg"
+										key={slide.id}
+
+										src={slide.src} />
+								</TransformComponent>
+							</TransformWrapper>
+							<p>{slide.title}</p>
+						</IonSlide>
 				))}
 				
 			</IonSlides>
