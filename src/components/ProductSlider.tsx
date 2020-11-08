@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { IonSlides, IonSlide, IonImg } from '@ionic/react'
 import '../styles/ProductSlider.css'
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 
 interface Slide {
 	pageName: string
@@ -43,16 +44,23 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, hand
 			>
 				{slides.map(slide => (
 					<IonSlide key={slide.id}>
-						<IonImg
-							key={slide.id}
-							class="ProductSlider__img"
-							src={slide.src}
-							/>
+						 <TransformWrapper>
+          					<TransformComponent>
+								<IonImg className="slideImg"
+									key={slide.id}
+									class="ProductSlider__img"
+									src={slide.src}
+								/>
+							</TransformComponent>
+						</TransformWrapper>
+						<p>{slide.title}</p>
 					</IonSlide>
 				))}
+				
 			</IonSlides>
-			<button onClick={() => handleChangeSlide('prev')}>Prev</button>
-			<button onClick={() => handleChangeSlide('next')}>Next</button>
+			
+			{/** <button onClick={() => handleChangeSlide('prev')}>Prev</button>
+			<button onClick={() => handleChangeSlide('next')}>Next</button>*/}
 		</div>
 	)
 }

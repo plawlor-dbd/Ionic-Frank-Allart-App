@@ -9,8 +9,20 @@
 	background-color: #000;
 }
 
+.slideImg {
+	object-position: top !important;
+	height: 100%;
+}
+
 /* Elements */
 .ProductSlider__close {
-	width: 100%;
-	height: 44px;
+	width: 20%;
+    height: 50px;
+    background-color: transparent;
+	color: #fff;
+	font-size:1em;
+}
+
+.swiper-slide{
+	flex-wrap: wrap;
 }

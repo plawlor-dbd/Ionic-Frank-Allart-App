@@ -14,7 +14,7 @@ interface ProductThumbnailProps {
 
 const ProductThumbnail: React.FC<ProductThumbnailProps> = ({ slideIndex, id, src, handleOpenSlider }) => {
   return (
-    <IonItem className="ProductThumbnail">
+    <IonItem detail={false} className="ProductThumbnail">
 			<IonThumbnail className="ProductThumbnail__inner">
 				<button
 					key={id}
