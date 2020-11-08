@@ -17,7 +17,6 @@ import { IonPage,
   IonItem} from "@ionic/react";
 import React, { useState } from "react";
 import '../styles/AlphabeticalIndex.css';
-import ProductImagesItem from '../components/ProductImagesItem';
   import { Images, getProductImages } from '../data/ProductImages';
 import ProductSlider from "../components/ProductSlider";
 import ProductThumbnail from "../components/ProductThumbnail";
@@ -28,7 +27,7 @@ const AlphabticalIndex: React.FC = () => {
   const [sliderIsOpen, setSliderIsOpen] = useState(false)
   const [openOnSlide, setOpenOnSlide] = useState(0)
   const filteredImages = ProductImages.filter((pi) => pi.pageName === "AI" )
-  const imagesListID = "AI"
+
 
   useIonViewWillEnter(() => {
     const pimg = getProductImages();

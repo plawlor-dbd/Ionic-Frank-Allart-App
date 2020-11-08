@@ -19,11 +19,9 @@ import {
   IonItem
 } from '@ionic/react';
 import '../styles/FinishesandPatinas.css';
-import ProductImagesItem from '../components/ProductImagesItem';
 import { Images, getProductImages } from '../data/ProductImages';
 import ProductSlider from '../components/ProductSlider';
 import ProductThumbnail from '../components/ProductThumbnail';
-import { RouteComponentProps } from 'react-router-dom';
 
 
 const FinishesandPatinas: React.FC = () => {
@@ -32,7 +30,6 @@ const FinishesandPatinas: React.FC = () => {
   const [sliderIsOpen, setSliderIsOpen] = useState(false)
   const [openOnSlide, setOpenOnSlide] = useState(0)
   const filteredImages = ProductImages.filter((pi) => pi.pageName === "F&P" )
-  const imagesListID = "F&P"
 
   useIonViewWillEnter(() => {
     const pimg = getProductImages();
