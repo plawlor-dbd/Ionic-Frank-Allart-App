@@ -9,12 +9,12 @@
 	background-color: #000;
 }
 
-.swiper-container{
-	height: 98%;
-}
+/*.swiper-container{
+	height: 98vh;
+}*/
 
 .TransformComponent-module_container__3NwNd{
-	width: 82% !important;
+	width: 82vw !important;
 }
 .slideImg {
 	object-fit: contain !important;
