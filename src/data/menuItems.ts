@@ -44,7 +44,7 @@ const menuItems: Menu[] = [
   },
   {
     name: 'Finishes and Patinas',
-    urlName:'FinishesandPatinas',
+    urlName:'ProductGallery/F&P',
     src: 'assets/menu-images/finishes.png',
     id: 6
   },

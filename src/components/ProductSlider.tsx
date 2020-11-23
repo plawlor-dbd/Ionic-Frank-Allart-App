@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { IonSlides, IonSlide} from '@ionic/react'
 import '../styles/ProductSlider.css'
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
@@ -12,40 +12,27 @@ interface Slide {
 
 interface ProductSliderProps {
 	slides: Slide[]
-	openOnSlide: number
-	handleCloseSlider: () => void
 }
 
-const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, handleCloseSlider }) => {
-	const slidesRef = useRef(null)
+const ProductSlider: React.FC<ProductSliderProps> = ({ slides}) => {
 
-  /*const handleChangeSlide = async (direction) => {
-		const swiper = await slidesRef.current.getSwiper()
-		
-		if (direction === 'next') {
-			swiper.slideNext()
-		} else {
-			// Assume previous slide
-			swiper.slidePrev()
-		}
-	}*/
+	const slideOpt ={
+		initialSlide: 0
+	}
+
 	
 	return (
 		<div className="ProductSlider">
-			<button
-						className="ProductSlider__close"
-						onClick={handleCloseSlider}
-					>
-						Close
-					</button>
-			<IonSlides
-				ref={slidesRef}
-				options={{initialSlide: openOnSlide}}
+				<IonSlides
+				options={slideOpt}
 			>
 				{slides.map(slide => (
 					
 						<IonSlide key={slide.id}>
-							<TransformWrapper>
+							<TransformWrapper
+							defaultScale={1}
+							defaultPositionX={0}
+							defaultPositionY={0}>
 								<TransformComponent>
 									<img alt={slide.title} className="slideImg"
 										key={slide.id}
@@ -58,9 +45,6 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ slides, openOnSlide, hand
 				))}
 				
 			</IonSlides>
-			
-			{/** <button onClick={() => handleChangeSlide('prev')}>Prev</button>
-			<button onClick={() => handleChangeSlide('next')}>Next</button>*/}
 		</div>
 	)
 }

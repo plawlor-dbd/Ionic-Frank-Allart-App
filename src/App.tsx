@@ -27,12 +27,9 @@ import CabinetFurniture from './pages/CabinetFurniture';
 import DoorBoltsandCremone from './pages/DoorBoltsandCremone';
 import WindowFurniture from './pages/WindowFurniture';
 import Miscellaneous from './pages/Miscellaneous';
-import FinishesandPatinas from './pages/FinishesandPatinas';
 import Indexes from './pages/Indexes';
 import Contact from './pages/ContactPg';
 import ProductGallery from './pages/ProductGallery';
-import AlphabticalIndex from './pages/AlphabeticalIndex';
-import NumericalIndex from './pages/NumericaIlndex';
 import Notifications from './pages/Notifications';
 import Search from './pages/Search';
 
@@ -65,12 +62,15 @@ const App: React.FC = () => (
       <Route path="/home/Miscellaneous" component={Miscellaneous} exact={true} />
       <Route path="/home/Miscellaneous/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
 
-      <Route path="/home/FinishesandPatinas" component={FinishesandPatinas} exact={true} />
+      {/*<Route path="/home/FinishesandPatinas" component={FinishesandPatinas} exact={true} />*/}
+      <Route path="/home/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
       
 
       <Route path="/home/Indexes" component={Indexes} exact={true} />
-      <Route path="/home/Indexes/AlphabeticalIndex" component={AlphabticalIndex} exact={true} />
-      <Route path="/home/Indexes/NumericalIndex" component={NumericalIndex} exact={true} />
+      {/*<Route path="/home/Indexes/AlphabeticalIndex" component={AlphabticalIndex} exact={true} />*/}
+      <Route path="/home/Indexes/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
+      {/*<Route path="/home/Indexes/NumericalIndex" component={NumericalIndex} exact={true} />*/}
+      <Route path="/home/Indexes/ProductGallery/:imagesListID" component={ProductGallery} exact={true} />
 
       <Route path="/home/Contact" component={Contact} exact={true} />
       <Route exact path="/" render={() => <Redirect to="/home" />} />
