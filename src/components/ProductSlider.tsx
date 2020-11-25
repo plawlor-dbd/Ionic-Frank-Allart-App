@@ -1,8 +1,7 @@
 import React from 'react'
-import { IonSlides, IonSlide, useIonViewWillEnter,} from '@ionic/react'
+import { IonSlides, IonSlide} from '@ionic/react'
 import '../styles/ProductSlider.css'
 import { TransformWrapper, TransformComponent} from 'react-zoom-pan-pinch'
-import { Transform } from 'stream'
 
 interface Slide {
 	pageName: string
